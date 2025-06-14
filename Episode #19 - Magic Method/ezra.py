@@ -12,7 +12,8 @@ class Mangga:
         return "Mangga: {} dengan jumlah: {}".format(self.nama,self.jumlah)
 
     def __add__(self,objek):
-        return self.jumlah + objek.jumlah
+        # return self.jumlah + objek.jumlah
+        return Mangga("Semuanya", self.jumlah + objek.jumlah)
 
     @property
     def __dict__(self):
@@ -21,7 +22,8 @@ class Mangga:
 
 belanja1 = Mangga("arumanis",10)
 belanja2 = Mangga("mana lagi",30)
+belanja3 = Mangga("Asam", 1000)
 print(belanja1)
 print(belanja2)
-print(belanja1 + belanja2)
+print(belanja1 + belanja2 + belanja3)
 print(belanja1.__dict__)
